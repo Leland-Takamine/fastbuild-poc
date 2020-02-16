@@ -2,7 +2,3 @@
   compile_sdk_version = android-29
 [project]
   ide = intellij
-[java]
-    source_level = 8
-    target_level = 8
-    desugar_interface_methods = true

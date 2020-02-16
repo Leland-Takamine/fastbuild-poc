@@ -48,20 +48,10 @@ android_library(
 
 android_library(
     name = 'foo',
-    target = '8',
-    source = '8',
     srcs = glob(['src/fastbuild/foo/**']),
-    deps = [
-        ':rt-stub'
-    ],
 )
 
 android_library(
     name = 'exo',
     srcs = glob(['src/exopackage/**']),
-)
-
-prebuilt_jar(
-    name = 'rt-stub',
-    binary_jar = 'rt-stub.jar',
 )
