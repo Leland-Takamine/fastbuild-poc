@@ -1,5 +1,7 @@
 # Minimal incremental dex POC
 
+Proof of concept demonstrating the ability to build/install/run code on a per-target basis.
+
 #### Instructions
 
 1. Connect a device via adb
