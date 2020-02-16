@@ -6,7 +6,7 @@ Proof of concept demonstrating the ability to build/install/run code on a per-ta
 
 1. Connect a device via adb
 2. Run `buck install -r :apk`
-3. Make a change to `fastbuild.foo.Foo`
+3. Make a change to `app.foo.Foo`
 4. Run `./fastbuild.sh`
 
 #### What's happening at build time ([fastbuild.sh](https://github.com/Leland-Takamine/fastbuild-poc/blob/26f9c559fc2d4247da67bdbce8b8674de357739c/fastbuild.sh#L1))

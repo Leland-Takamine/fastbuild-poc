@@ -11,8 +11,8 @@ android_binary(
     use_split_dex = True,
     exopackage_modes = ['secondary_dex'],
     primary_dex_patterns = [
-        '^fastbuild/app',
-        '^exopackage',
+        '^app/Application^',
+        '^fastbuild',
     ],
     deps = [ ':app' ],
 )
@@ -31,16 +31,16 @@ keystore(
 
 android_library(
     name = 'app',
-    srcs = glob(['src/fastbuild/app/**']),
+    srcs = ['src/app/Application.java'],
     deps = [
-        ':exo',
+        ':fastbuild',
         ':activity'
     ]
 )
 
 android_library(
     name = 'activity',
-    srcs = glob(['src/fastbuild/activity/**']),
+    srcs = glob(['src/app/activity/**']),
     deps = [
         ':foo',
     ]
@@ -48,10 +48,10 @@ android_library(
 
 android_library(
     name = 'foo',
-    srcs = glob(['src/fastbuild/foo/**']),
+    srcs = glob(['src/app/foo/**']),
 )
 
 android_library(
-    name = 'exo',
-    srcs = glob(['src/exopackage/**']),
+    name = 'fastbuild',
+    srcs = glob(['src/fastbuild/**']),
 )

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package exopackage;
+package fastbuild;
 
 import java.lang.reflect.Field;
 

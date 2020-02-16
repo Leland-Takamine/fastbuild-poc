@@ -6,9 +6,9 @@
   android:versionName="1.0">
 
   <application
-          android:name=".Application"
+          android:name="app.Application"
           android:debuggable="true">
-    <activity android:name="fastbuild.activity.MainActivity">
+    <activity android:name="app.activity.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

@@ -1,9 +1,9 @@
-package fastbuild.activity;
+package app.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
-import fastbuild.foo.Foo;
+import app.foo.Foo;
 
 public class MainActivity extends Activity {
 

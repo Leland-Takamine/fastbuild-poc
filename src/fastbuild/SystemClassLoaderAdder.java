@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package exopackage;
+package fastbuild;
 
 import android.annotation.TargetApi;
 import android.os.Build;
@@ -32,7 +32,7 @@ import java.util.List;
  * uses reflection to modify the system class loader. This was written based on careful inspection
  * of the source Android source for {@link DexClassLoader} and {@link PathClassLoader}.
  */
-public class SystemClassLoaderAdder {
+class SystemClassLoaderAdder {
 
   private SystemClassLoaderAdder() {}
 

@@ -1,4 +1,4 @@
-package fastbuild.foo;
+package app.foo;
 
 public class Foo {
 
