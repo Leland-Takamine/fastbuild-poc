@@ -2,6 +2,8 @@
 
 Proof of concept demonstrating the ability to build/install/run code on a per-target basis.
 
+![](https://github.com/Leland-Takamine/fastbuild-poc/blob/master/fastbuild.png?raw=true)
+
 #### Instructions
 
 1. Connect a device via adb
