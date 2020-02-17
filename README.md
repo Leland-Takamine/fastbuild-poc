@@ -11,16 +11,16 @@ Proof of concept demonstrating the ability to build/install/run code on a per-ta
 3. Make a change to `app.foo.Foo`
 4. Run `./fastbuild.sh`
 
-#### What's happening at build time ([fastbuild.sh](https://github.com/Leland-Takamine/fastbuild-poc/blob/cf5914bdd3bf109639c31208f8fe9f607c26352d/fastbuild.sh#L1))
+#### What's happening at build time ([fastbuild.sh](https://github.com/Leland-Takamine/fastbuild-poc/blob/cf5914bdd3bf109639c31208f8fe9f607c26352d/fastbuild.sh))
 
 1. Generate `:foo` jar ([BUCK](https://github.com/Leland-Takamine/fastbuild-poc/blob/cf5914bdd3bf109639c31208f8fe9f607c26352d/BUCK#L49-L52))
 2. Generate custom `:foo-dex` dex file ([BUCK](https://github.com/Leland-Takamine/fastbuild-poc/blob/cf5914bdd3bf109639c31208f8fe9f607c26352d/BUCK#L20-L24))
 3. Push dex file to `/data/local/tmp/fastbuild`
 4. Restart the app
 
-#### What's happening at runtime
+#### What's happening at runtime ([Fastbuild.java](https://github.com/Leland-Takamine/fastbuild-poc/blob/cf5914bdd3bf109639c31208f8fe9f607c26352d/src/fastbuild/Fastbuild.java))
 
-At app startup, add all dex files in the following directories to the system class loader ([Fastbuild.java](https://github.com/Leland-Takamine/fastbuild-poc/blob/cf5914bdd3bf109639c31208f8fe9f607c26352d/src/fastbuild/Fastbuild.java#L15-L18)):
+At app startup, add all dex files in the following directories to the system class loader:
 * `/data/local/tmp/fastbuild/`
 * `/data/local/tmp/exopackage/<package-name>/secondary-dex`
 
